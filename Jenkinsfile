@@ -16,17 +16,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'echo this is build'
+                sh 'echo this is build'
             }
         }
         stage('Test') {
             steps {
-                echo 'echo this is test'
+                sh 'echo this is test'
+		sh 'sleep 10'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'echo this is deploy'
+                sh 'echo this is deploy'
             }
         }
 	stage("print params"){
